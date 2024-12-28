@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('apply_forms', function (Blueprint $table) {
+        Schema::create('peoplelists', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
+            $table->text('lastname');
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('apply_forms');
+        Schema::dropIfExists('peoplelists');
     }
 };
